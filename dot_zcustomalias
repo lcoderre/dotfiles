@@ -1,0 +1,18 @@
+alias glola='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all'
+alias glol='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
+alias gl='glol'
+alias gs='git status'
+alias gd='git diff'
+alias gdt='git difftool'
+alias gshow='git show'
+alias cb=current_branch
+alias gcleanup='GIT_OLD_BRANCH=$(current_branch); git push origin :$(current_branch) ; gb -D master ; gco master ; gb -D $GIT_OLD_BRANCH'
+alias uncommit='git reset HEAD^1'
+alias gp='git push origin $(current_branch)'
+alias gpf='git push origin $(current_branch) -f'
+alias gpfam='git push origin $(current_branch) -f && git push origin $(current_branch):master'
+alias grhh=''
+alias grh='git reset --hard'
+alias gsub='git submodule'
+alias gsuir='git submodule update --init --recursive'
+alias cb=current_branch

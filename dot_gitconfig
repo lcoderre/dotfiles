@@ -1,0 +1,18 @@
+[user]
+	name = Laurens Coderre
+	email = lcoderre@me.com
+[status]
+	submodulesummary = 1
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[core]
+	attributesfile = ~/.gitattributes
+[alias]
+	diff-image = "!f() { cd -- \"${GIT_PREFIX:-.}\"; GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
+[diff "image"]
+	command = ~/dev/git-diff-image/git_diff_image
